@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Car {
+        constructor(company, model, year) {
+          this.company = company;
+          this.model = model;
+          this.year = year;
+        }
+
+        getDescription() {
+          return `This is a ${this.year} ${this.company} ${this.model}`;
+        }
+      }
+
+      const myCar = new Car("Skoda", "Rapid", 2022);
+      console.log(myCar.getDescription()); // This is a 2022 Skoda Rapid
+    </script>
+  </body>
+</html>

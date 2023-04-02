@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      function filterByCategory(products) {
+        return function (category) {
+          return products.filter(function (product) {
+            return product.category === category;
+          });
+        };
+      }
+
+      const products = [
+        { name: "Shirt", category: "Clothing" },
+        { name: "Pants", category: "Clothing" },
+        { name: "Hats", category: "Accessories" },
+        { name: "Sunglasses", category: "Accessories" },
+      ];
+
+      const filterProductsByCategory = filterByCategory(products);
+
+      const electronicsProducts = filterProductsByCategory("Clothing");
+      console.log(electronicsProducts); // [{ name: "Shirt", category: "Clothing" }, { name: "Pants", category: "clothing" }]
+
+      const clothingProducts = filterProductsByCategory("Accessories");
+      console.log(clothingProducts); // [{ name: "Hats", category: "Accessories" }]
+    
+    </script>
+  </body>
+</html>

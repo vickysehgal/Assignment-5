@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      function convertToNumber(str) {
+        const num = Number(str);
+        if (Number.isNaN(num)) {
+          throw new Error("Invalid number");
+        }
+        return num;
+      }
+
+      try {
+        const num = convertToNumber("42");
+        console.log(num); // Output: 42
+      } catch (error) {
+        console.error(error.message);
+      }
+
+      try {
+        const num = convertToNumber("not a number");
+        console.log(num);
+      } catch (error) {
+        console.error(error.message); // Output: Invalid number
+      }
+      
+    </script>
+  </body>
+</html>

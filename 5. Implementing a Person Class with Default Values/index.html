@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      class Person {
+        constructor(name = "Unknown", age = 0) {
+          this.name = name;
+          this.age = age;
+        }
+
+        getDetails() {
+          return `Name: ${this.name}, Age: ${this.age}`;
+        }
+      }
+
+      // Example usage:
+      const person1 = new Person("Mithun", 20);
+      console.log(person1.getDetails()); // Output: "Name: John, Age: 30"
+
+      const person2 = new Person();
+      console.log(person2.getDetails()); // Output: "Name: Unknown, Age: 0"
+    
+    </script>
+  </body>
+</html>
